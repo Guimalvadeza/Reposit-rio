@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<center>
+    <input id="numero" type="number" placeholder="Digite a Temperatura"><br><br>
+    <input id="cf" type="radio" name="grupo">Celsius para Fahrenheit </input><br><br>
+    <input id="fc" type="radio" name="grupo">Fahrenheit para Celsius </input><br><br>
+    <input id="ck" type="radio" name="grupo">Celsius para Kelvin </input><br><br>
+    <input id="kc" type="radio" name="grupo">Kelvin para Celsius </input><br><br>
+    <input id="fk" type="radio" name="grupo">Fahrenheit para Kelvin </input><br><br>
+    <input id="kf" type="radio" name="grupo">Kelvin para Fahrenheit </input><br><br>
+    <button onclick="calculo()">Calcular °C</button>
+    <p id="r">Resultado</p>
+</center>
+</body>
+</html>
+<script>
+        var campo = document.getElementById("numero");
+        var radiocf = document.getElementById("cf");
+        var radiofc = document.getElementById("fc");
+        var radiock = document.getElementById("ck");
+        var radiokc = document.getElementById("kc");
+        var radiofk = document.getElementById("fk");
+        var radiokf = document.getElementById("kf");
+        var Resultado = document.getElementById("r");
+        
+        function calculo(){
+            var Temperatura = Numbercampo.value
+            if(radiocf.checked){
+                Resultado.innerHTML = Temperatura * 9/5 +32 + "ºF"
+            }
+            else if(radiofc.checked){
+                Resultado.innerHTML = (Temperatura -32) *5/9 + "°C"
+            }
+            else if(radiock.checked){
+                Resultado.innerHTML = Temperatura +273,15 + "°K"
+            }
+            else if(radiokc.checked){
+                Resultado.innerHTML = Temperatura -273,15 + "°C"
+            }
+    }
+</script>
